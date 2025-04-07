@@ -30,26 +30,44 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  max-width: 39.25rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-inline: auto;
+
+  background-color: var(--background-primary);
+}
+
 .title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: bold;
+  color: var(--content-primary);
 }
 
 .label {
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 600;
+  color: var(--always-white);
 }
 
 .paragraph {
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 500;
+  color: var(--content-secondary);
 }
 
 .link {
   font-size: 0.875rem;
   line-height: 1rem;
   font-weight: 500;
+  color: var(--color-brand);
+  text-decoration: none;
 }

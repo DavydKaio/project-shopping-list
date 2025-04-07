@@ -15,6 +15,50 @@
     />
   </head>
   <body>
+    <img src="assets/logo.svg" alt="Logo do quicklist" />
+
+    <header>
+      <a href="#" class="link">
+        <img src="assets/icons/arrow-letf.svg" alt="" />
+        <span>Voltar</span>
+      </a>
+
+      <h1 class="title">Compras da semana</h1>
+    </header>
+
+    <main>
+      <form>
+        <input type="text" placeholder="Adicione um novo item" required />
+        <button type="submit" class="label">Adicionar item</button>
+      </form>
+
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="shopping-item" id="shopping-item" />
+            <span></span>
+          </label>
+          <p class="paragraph">Pão de forma</p>
+          <button type="button">
+            <img src="assets/icons/trash.svg" alt="ícone de lixeira" />
+          </button>
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <div>
+        <img
+          src="assets/icons/warning-circle-filled.svg"
+          alt="Ícone de informação"
+        />
+        <span class="label">O item foi removido da lista</span>
+        <button type="button">
+          <img src="assets/icons/delete-small.svg" alt="Ícone de fechar" />
+        </button>
+      </div>
+    </footer>
+
     <script src="scripts.js"></script>
   </body>
 </html>

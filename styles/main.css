@@ -1,0 +1,134 @@
+main {
+  width: 100%;
+
+  & form {
+    margin-bottom: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 10rem;
+    gap: 1rem;
+
+    & input {
+      font-size: 1rem;
+      line-height: 140%;
+      font-weight: 400;
+      color: var(--content-primary);
+
+      padding: 0.55rem 1.125rem;
+      background-color: var(--background-secondary);
+
+      border: 2px solid var(--border-primary);
+      border-radius: 0.75rem;
+      outline: none;
+
+      &::placeholder {
+        color: var(--content-tertiary);
+      }
+
+      &:hover {
+        border-color: var(--border-hover);
+      }
+
+      &:focus {
+        border-color: var(--color-brand);
+      }
+    }
+
+    & button {
+      background-color: var(--color-brand);
+      border: none;
+      border-radius: 0.75rem;
+      outline: none;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-brand-hover);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  & ul {
+    list-style: none;
+
+    & li {
+      background-color: var(--background-secondary);
+      margin-bottom: 0.75rem;
+      padding: 0.531rem 0.75rem;
+      border-radius: 0.75rem;
+
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 0.75rem;
+
+      & label {
+        position: relative;
+        width: 1rem;
+
+        & input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+
+          &:checked + span {
+            background-color: var(--color-brand);
+            border-color: var(--color-brand);
+          }
+
+          &:checked + span::after {
+            display: block;
+          }
+        }
+
+        & span {
+          position: absolute;
+          top: -0.5rem;
+          left: 0;
+          width: 1rem;
+          height: 1rem;
+          background-color: var(--background-secondary);
+          border: 1px solid var(--border-primary);
+          border-radius: 0.375rem;
+          cursor: pointer;
+
+          &:hover {
+            border-color: var(--border-hover);
+          }
+
+          &::after {
+            content: "";
+            display: none;
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            width: 3px;
+            height: 7px;
+            border: solid var(--always-white);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      & button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--always-white);
+        border: none;
+        cursor: pointer;
+
+        & img {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+}
