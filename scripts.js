@@ -2,6 +2,8 @@ const list = document.querySelector("ul");
 const input = document.querySelector("input");
 const submitButton = document.querySelector("form button");
 
+// Adicionar item à lista
+
 let inputValue = "";
 
 input.addEventListener("change", (event) => {
@@ -37,4 +39,22 @@ submitButton.addEventListener("click", (event) => {
 
   input.value = "";
   inputValue = "";
+});
+
+// Remover item da lista
+
+list.addEventListener("click", (event) => {
+  /* Ao observar o click dentro da lista o closest retorna o elemento em si 
+  ou o seu parente mais próximo dependendo do seletor CSS que você passe para a função */
+  const isDeleteButton = event.target.closest("button");
+
+  /* Garante que está realmente clicando no item de lixeira, pois é o único button 
+   com uma img dentro */
+  if (isDeleteButton && isDeleteButton.querySelector("img")) {
+    // Recupera o li ao qual o button que foi clicado é filho
+    const listItem = isDeleteButton.closest("li");
+    if (listItem) {
+      listItem.remove();
+    }
+  }
 });
