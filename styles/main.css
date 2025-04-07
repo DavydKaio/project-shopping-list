@@ -51,6 +51,7 @@ main {
 
   & ul {
     list-style: none;
+    margin-bottom: 5rem;
 
     & li {
       background-color: var(--background-secondary);
