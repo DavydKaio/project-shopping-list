@@ -71,3 +71,14 @@ body {
   color: var(--color-brand);
   text-decoration: none;
 }
+
+@media (max-width: 390px) {
+  body {
+    max-width: 20.375rem;
+    margin-top: 0;
+
+    & > img {
+      display: none;
+    }
+  }
+}

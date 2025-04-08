@@ -31,3 +31,11 @@ footer {
     }
   }
 }
+
+@media (max-width: 390px) {
+  footer {
+    & div {
+      max-width: 20.375rem;
+    }
+  }
+}

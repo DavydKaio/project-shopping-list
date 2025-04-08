@@ -133,3 +133,12 @@ main {
     }
   }
 }
+
+@media (max-width: 390px) {
+  main {
+    & form {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+}

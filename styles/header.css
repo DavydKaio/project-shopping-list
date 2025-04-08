@@ -10,3 +10,9 @@ header {
     margin-bottom: 1rem;
   }
 }
+
+@media (max-width: 390px) {
+  header {
+    margin-block: 4.875rem 2.75rem;
+  }
+}
