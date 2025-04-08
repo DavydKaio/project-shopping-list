@@ -65,16 +65,14 @@ list.addEventListener("click", (event) => {
 // Fazer o aviso de item deletado aparecer e sumir da tela de forma passiva
 function showFooter() {
   footer.style = `
-    opacity: 1;
-    transition: opacity 1s;
+    display: block;
   `;
 
   setTimeout(() => {
     footer.style = `
-    opacity: 0;
-    transition: opacity 1s;
+      display: none;
   `;
-  }, 4000);
+  }, 3000);
 }
 
 // Evento para fechar o botão com ação ativa do usuário

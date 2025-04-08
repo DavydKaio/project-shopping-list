@@ -1,11 +1,10 @@
 footer {
-  display: block;
+  display: none;
   width: 100%;
-  opacity: 0;
 
   & div {
     position: fixed;
-    bottom: 9.375rem;
+    bottom: 4rem;
 
     max-width: 39.25rem;
     width: 100%;
