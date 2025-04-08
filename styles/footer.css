@@ -1,6 +1,7 @@
 footer {
-  display: none;
+  display: block;
   width: 100%;
+  opacity: 0;
 
   & div {
     position: fixed;

@@ -1,6 +1,8 @@
 const list = document.querySelector("ul");
 const input = document.querySelector("input");
 const submitButton = document.querySelector("form button");
+const footer = document.querySelector("footer");
+const closeFooterButton = document.querySelector("div button");
 
 // Adicionar item à lista
 
@@ -55,6 +57,27 @@ list.addEventListener("click", (event) => {
     const listItem = isDeleteButton.closest("li");
     if (listItem) {
       listItem.remove();
+      showFooter();
     }
   }
+});
+
+// Fazer o aviso de item deletado aparecer e sumir da tela de forma passiva
+function showFooter() {
+  footer.style = `
+    opacity: 1;
+    transition: opacity 1s;
+  `;
+
+  setTimeout(() => {
+    footer.style = `
+    opacity: 0;
+    transition: opacity 1s;
+  `;
+  }, 4000);
+}
+
+// Evento para fechar o botão com ação ativa do usuário
+closeFooterButton.addEventListener("click", () => {
+  footer.style = "opacity: 0";
 });
